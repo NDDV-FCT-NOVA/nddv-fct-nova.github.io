@@ -34,16 +34,18 @@
 // Palette.
 	$palette: (
 		bg:					#000,
-		bg-alt:				darken(bg, 5),
+		bg-alt:				lighten(#000, 5),
+		bg-nav:				#EC3D4E,
+		bg-nav-alt:			darken(#EC3D4E, 5),
 		fg:					rgba(255,255,255,0.55),
 		fg-bold:			#ffffff,
 		fg-light:			rgba(255,255,255,0.35),
 		border:				rgba(255,255,255,0.15),
 		border-bg:			rgba(255,255,255,0.05),
 		accent1:			#222,
-		accent1-alt:		darken(accent1, 10),
+		accent1-alt:		darken(#222, 10),
 		accent2:			#444,
-		accent2-alt:		darken(accent2, 10),
+		accent2-alt:		darken(#444, 10),
 		accent3:			#282828,
-		accent3-alt:		darken(accent3, 10)
+		accent3-alt:		darken(#282828, 10)
 	);
