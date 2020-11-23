@@ -28,7 +28,7 @@
 			@include vendor('transition', (
 				'opacity #{_duration(activation)} ease',
 			));
-			min-height: 100%;
+			margin-top: 20%;
 			opacity: 1;
 			width: 100%;
 

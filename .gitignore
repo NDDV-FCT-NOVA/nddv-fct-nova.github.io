@@ -1,0 +1,24 @@
+/assets/css/main.css.map
+
+# Jekyll
+_site/
+*-cache/
+.jekyll-metadata
+
+# Ruby
+.bundle/
+.byebug_history
+.ruby-gemset
+.ruby-version
+*.gem
+Gemfile.lock
+
+# Folders
+/vendor
+bbin/
+bin/
+coverage
+gh-pages/
+pkg/
+test/dest
+tmp/*

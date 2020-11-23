@@ -1,0 +1,6 @@
+- name: Home
+  link: /index.html#intro
+- name: Sobre nós
+  link: /index.html#about
+- name: Contactos
+  link: /index.html#contacts

@@ -18,6 +18,17 @@
 			display: block;
 			font-size: 1.25em;
 			font-weight: _font(weight-bold);
+			@include breakpoint(">small"){
+				height: 50px;
+				> img {
+					height: 100%;
+				}
+			}
+			@include breakpoint("<=small"){
+				width: 100%;
+				align-content: center;
+				align-items: center;
+			}
 		}
 
 		> nav {
@@ -61,6 +72,8 @@
 
 		@include breakpoint('<=small') {
 			padding: 1em 2em;
+			align-content: center;
+			align-items: center;
 		}
 
 		@include breakpoint('<=xsmall') {
