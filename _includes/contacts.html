@@ -1,4 +1,4 @@
-{% assign contacts = include.contacts}
+{% assign contacts = include.contacts %}
 <ul class="contact">
     {% if contacts.address %}
     <li>
@@ -12,36 +12,60 @@
         <a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a>
     </li>
     {% endif %}
-    {% if contacts.phone %}
+    {% if contacts.website %}
     <li>
-        <h3>Phone</h3>
-        <span>(000) 000-0000</span>
+        <h3>Website</h3>
+        <a href="{{ contacts.website }}">{{ contacts.website }}</a>
     </li>
     {% endif %}
+    {% if contacts.social %}
     <li>
         <h3>Social</h3>
         <ul class="icons">
-            {% if contacts.twitter %}
-            <li><a href="{{ contacts.twitter }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            {% if contacts.social.twitter %}
+            <li><a href="{{ contacts.social.twitter }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
             {% endif %}
-            {% if contacts.facebook %}
-            <li><a href="{{ contacts.facebook }}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            {% if contacts.social.facebook %}
+            <li><a href="{{ contacts.social.facebook }}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
             {% endif %}
-            {% if contacts.github %}
-            <li><a href="{{ contacts.github }}" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            {% if contacts.social.github %}
+            <li><a href="https://github.com/{{ contacts.social.github }}" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
             {% endif %}
-            {% if contacts.instagram %}
-            <li><a href="{{ contacts.instagram }}" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            {% if contacts.social.instagram %}
+            <li><a href="https://www.instagram.com/{{ contacts.social.instagram }}/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
             {% endif %}
-            {% if contacts.linkedin %}
-            <li><a href="{{ contacts.linkedin }}" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            {% if contacts.social.linkedin %}
+            <li><a href="{{ contacts.social.linkedin }}" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
             {% endif %}
         {% comment %}
-            TODO: Discord not yet implemented
-            {% if contacts.discord %}
-            <li><a href="{{ contacts.twitter }}" class="icon brands fa-discord-in"><span class="label">Discord</span></a></li>
+            //TODO: These don't have icons yet
+            {% if contacts.social.discord_server %}
+            <li><a href="https://discord.gg/{{ contacts.social.discord_server }}" class="icon brands fa-discord-in"><span class="label">Discord Server</span></a></li>
+            {% endif %}
+            {% if contacts.social.steam_personal %}
+            <li><a href="https://steamcommunity.com/profiles/{{ contacts.social.steam_personal }}/" class="icon brands fa-discord-in"><span class="label">Steam Profile</span></a></li>
+            {% endif %}
+            {% if contacts.social.itch %}
+            <li><a href="https://{{ contacts.social.itch }}.itch.io" class="icon brands fa-discord-in"><span class="label">Itch</span></a></li>
             {% endif %}
         {% endcomment %}
         </ul>
     </li>
+    {% endif %}
+    {% if contacts.other and contacts.other | size > 0 %}
+    <li></li>
+        <h3>Outros:</h3>
+        <ul>
+            {% for contact in contacts.other %}
+            <p>
+                {% if contact.link %}
+                <a href="{{ contact.link }}">{{ contact.platform }}</a>
+                {% else %}
+                <b>{{ contact.platform }}:</b> {{ contact.id }}
+                {% endif %}
+            </p>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endif %}
 </ul>
