@@ -31,6 +31,7 @@ bundle exec jekyll serve
 - [jQuery](jquery.com)
 - [Scrollex](github.com/ajlkn/jquery.scrollex)
 - [Responsive Tools](github.com/ajlkn/responsive-tools)
+- [Jekyll installation](https://jekyllrb.com/docs/installation)
 
 
 Project developped by [Rafael Patronilo](mailto:rafael.patronilo@hotmail.com)
