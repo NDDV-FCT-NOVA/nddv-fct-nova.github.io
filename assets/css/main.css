@@ -2091,6 +2091,16 @@ table {
     display: block;
     font-size: 1.25em;
     font-weight: bold; }
+    @media screen and (min-width: 737px) {
+      #header > .title {
+        height: 50px; }
+        #header > .title > img {
+          height: 100%; } }
+    @media screen and (max-width: 736px) {
+      #header > .title {
+        width: 100%;
+        align-content: center;
+        align-items: center; } }
   #header > nav {
     -moz-flex: 1;
     -webkit-flex: 1;
@@ -2121,7 +2131,9 @@ table {
             color: #ffffff; }
   @media screen and (max-width: 736px) {
     #header {
-      padding: 1em 2em; } }
+      padding: 1em 2em;
+      align-content: center;
+      align-items: center; } }
   @media screen and (max-width: 480px) {
     #header {
       display: block;
@@ -2203,7 +2215,7 @@ table {
     -webkit-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
     transition: opacity 1s ease;
-    min-height: 100%;
+    margin-top: 20%;
     opacity: 1;
     width: 100%; }
     body.is-ie #sidebar > .inner {
