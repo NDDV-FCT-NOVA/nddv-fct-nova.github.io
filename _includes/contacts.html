@@ -1,0 +1,47 @@
+{% assign contacts = include.contacts}
+<ul class="contact">
+    {% if contacts.address %}
+    <li>
+        <h3>Endereço</h3>
+        <span>{{ contacts.address }}</span>
+    </li>
+    {% endif %}
+    {% if contacts.email %}
+    <li>
+        <h3>Email</h3>
+        <a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a>
+    </li>
+    {% endif %}
+    {% if contacts.phone %}
+    <li>
+        <h3>Phone</h3>
+        <span>(000) 000-0000</span>
+    </li>
+    {% endif %}
+    <li>
+        <h3>Social</h3>
+        <ul class="icons">
+            {% if contacts.twitter %}
+            <li><a href="{{ contacts.twitter }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            {% endif %}
+            {% if contacts.facebook %}
+            <li><a href="{{ contacts.facebook }}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            {% endif %}
+            {% if contacts.github %}
+            <li><a href="{{ contacts.github }}" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            {% endif %}
+            {% if contacts.instagram %}
+            <li><a href="{{ contacts.instagram }}" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            {% endif %}
+            {% if contacts.linkedin %}
+            <li><a href="{{ contacts.linkedin }}" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            {% endif %}
+        {% comment %}
+            TODO: Discord not yet implemented
+            {% if contacts.discord %}
+            <li><a href="{{ contacts.twitter }}" class="icon brands fa-discord-in"><span class="label">Discord</span></a></li>
+            {% endif %}
+        {% endcomment %}
+        </ul>
+    </li>
+</ul>
