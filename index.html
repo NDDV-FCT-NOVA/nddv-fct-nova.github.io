@@ -23,14 +23,13 @@ contact:
 		<nav>
 			<ul>
 				<li><a href="#intro">{{ page.welcome_short_title }}</a></li>
-			{% for nav_element in site.data.navigation offset:1 %}
-				<li><a href="{{ nav_element.link | relative_url }}">{{ nav_element.name }}</a></li>
+			{% for nav_element in site.data.navigation %}
+				<li><a href="{% if nav_element.home_relative %}{{ nav_element.home_relative }}{% else %}{{ nav_element.link | relative_url }}{% endif %}">{{ nav_element.name }}</a></li>
 			{% endfor %}
 			</ul>
 		</nav>
 	</div>
 </section>
-
 <!-- Wrapper -->
 <div id="wrapper">
 
