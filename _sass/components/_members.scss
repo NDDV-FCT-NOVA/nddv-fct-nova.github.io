@@ -1,0 +1,54 @@
+#members, #management {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+
+    div{
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        div{
+            margin: 1em;
+            float: left;
+            text-align: center;
+            a{
+                border: 0;
+                img{
+                    height: 8em;
+                    width: 8em;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .role{
+                    color: _palette(fg-light);
+                }
+            }
+        }
+    }
+}
+
+#member_frame{
+    overflow: auto;
+    div{
+        
+        margin: 0.5em;
+        .name{
+            margin-bottom: 0;
+            line-height: 0.6em;
+            margin-top: 0.2em;
+        }
+        .course {
+            color: _palette(fg-light);
+            font-size: 0.9em;
+            br{
+                margin-bottom: 1em;
+            }
+        }
+        img{
+            float: left;
+            margin-right: 1em;
+            width: 20em;
+            object-fit: cover;
+        }
+    }
+}

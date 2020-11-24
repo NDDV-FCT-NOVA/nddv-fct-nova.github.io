@@ -12,25 +12,23 @@ about: |
  - Criar interesse e auxiliar alunos da FCT em áreas relacionadas com game dev
  - Servir como ponto de ligação entre alunos e a comunidade portuguesa de game dev
  - Tornar a FCT uma referência nacional para game dev
-contact:
+contacts:
  title: Contactos
  paragraph: Segues-nos para estares sempre a par de novidades!!!
 ---
 <!-- Sidebar -->
 <section id="sidebar">
-	<img src="images/logo-no-frame.png">
+	<a href="#intro"><img src="assets/images/logo-no-frame.png"></a>
 	<div class="inner">
 		<nav>
 			<ul>
-				<li><a href="#intro">{{ page.welcome_short_title }}</a></li>
-			{% for nav_element in site.data.navigation offset:1 %}
-				<li><a href="{{ nav_element.link | relative_url }}">{{ nav_element.name }}</a></li>
+			{% for nav_element in site.data.navigation %}
+				<li><a href="{% if nav_element.home_relative %}{{ nav_element.home_relative }}{% else %}{{ nav_element.link | relative_url }}{% endif %}">{{ nav_element.name }}</a></li>
 			{% endfor %}
 			</ul>
 		</nav>
 	</div>
 </section>
-
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -41,9 +39,17 @@ contact:
 				</ul>
 			</div>
 		</section>
+	<!-- News -->
+	<section id="about" class="wrapper style3 spotlights">
+		<div class="content">
+			<div class="inner">
+				
+			</div>
+		</div>
+	</section>
 
-	<!-- One -->
-		<section id="about" class="wrapper style2 spotlights">
+	<!-- About -->
+		<section id="about" class="wrapper style3 spotlights">
 			<section>
 			{% if page.about.cover %}
 				<a href="#" class="image"><img src="{{ about.cover | relative_url }}" alt="" data-position="center center" /></a>
@@ -51,11 +57,13 @@ contact:
 				<div class="content">
 					<div class="inner">
 						{{ page.about | markdownify }}
+						<br/><br />
+						<a href="{{'/about.html' | relative_url }}" class="button">Ler mais</a>
 					</div>
 				</div>
 			</section>
 			
-	<!-- Two -->
+	<!-- Contacts -->
 		<section id="contacts" class="wrapper style1 fade-up">
 			<div class="inner">
 				<h2>{{page.contacts.title}}</h2>
