@@ -37,6 +37,9 @@
             {% if contacts.social.instagram %}
             <li><a href="https://www.instagram.com/{{ contacts.social.instagram }}/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
             {% endif %}
+            {% if contacts.social.youtube %}
+            <li><a href="https://www.youtube.com/channel/{{ contacts.social.youtube }}" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+            {% endif %}
             {% if contacts.social.linkedin %}
             <li><a href="https://www.linkedin.com/in/{{ contacts.social.linkedin }}/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
             {% endif %}
@@ -48,6 +51,9 @@
             {% endif %}
             {% if contacts.social.steam_developer %}
             <li><a href="https://store.steampowered.com/developer/{{ contacts.social.steam_developer }}/" class="icon brands fa-steam"><span class="label">Steam Developer</span></a></li>
+            {% endif %}
+            {% if contacts.social.twitch %}
+            <li><a href="https://www.twitch.tv/{{ contacts.social.twitch }}" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
             {% endif %}
             {% if contacts.social.itch %}
             <li><a href="https://{{ contacts.social.itch }}.itch.io" class="icon brands fa-itch-io"><span class="label">Itch</span></a></li>

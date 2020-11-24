@@ -50,6 +50,14 @@ contacts:
     #(https://steamcommunity.com/profiles/YOUR_ID_WOULD_BE_HERE/)
     # steam_personal: your_id
 
+    # This field is meant to have 
+    #the id for your youtube channel
+    #if you have the link you need to write only the id
+    #(https://www.youtube.com/channel/YOUR_ID_WOULD_BE_HERE)
+    # youtube: your_id
+
+    # twitch: your_twitch_username
+
     # steam_developer: your_steam_developer_name
 
     # itch: your_itch_username
