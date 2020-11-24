@@ -26,3 +26,29 @@
         }
     }
 }
+
+#member_frame{
+    overflow: auto;
+    div{
+        
+        margin: 0.5em;
+        .name{
+            margin-bottom: 0;
+            line-height: 0.6em;
+            margin-top: 0.2em;
+        }
+        .course {
+            color: _palette(fg-light);
+            font-size: 0.9em;
+            br{
+                margin-bottom: 1em;
+            }
+        }
+        img{
+            float: left;
+            margin-right: 1em;
+            width: 20em;
+            object-fit: cover;
+        }
+    }
+}

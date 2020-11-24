@@ -2,13 +2,15 @@
 layout: topbar-base
 ---
 
-<section>
-    {% if page.picture %}
-    </img src="{{page.picture}}">
-    {% endif %}
-    <h1>{{ page.name }}</h1>
-    <p><span>{{page.course}}</span></p>
-    {{content}}
+<section id="member_frame">
+    <div>
+        {% if page.picture %}
+        <img src="{{page.picture}}">
+        {% endif %}
+        <h1 class="name">{{ page.name }}</h1>
+        <span class="course">{{page.course}}<br/></span>
+        {{content}}
+    </div>
 </section>
 <section id="contacts" class="wrapper style1 fade-up">
     <div class="inner">

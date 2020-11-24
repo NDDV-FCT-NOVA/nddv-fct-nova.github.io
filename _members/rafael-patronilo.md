@@ -2,7 +2,6 @@
 layout: member
 name: Rafael Patronilo
 course: Engenharia Informática
-picture: /assets/members/default.svg
 
 contacts:
   social:
@@ -15,13 +14,5 @@ contacts:
     - platform: Discord username
       id: RafaGnious#9358
 ---
-*italic* 
-**bold** 
-- list item 
-  - sub item
-- list item
-- list item
-
-1. ordered list item
-2. ordered list item
-   1. sub item
+Sou membro do núcleo desde de 2019, tenho desde muito novo interesse em game 
+development tendo começado muito cedo a trabalhar com unity. 
