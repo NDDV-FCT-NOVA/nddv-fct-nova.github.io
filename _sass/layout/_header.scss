@@ -71,35 +71,6 @@
 		}
 
 		@include breakpoint('<=small') {
-			padding: 1em 2em;
-			align-content: center;
-			align-items: center;
-		}
-
-		@include breakpoint('<=xsmall') {
-			display: block;
-			padding: 0 2em;
-			text-align: left;
-
-			.title {
-				font-size: 1.25em;
-				padding: 1em 0;
-			}
-
-			> nav {
-				border-top: solid 1px _palette(border);
-				text-align: inherit;
-
-				> ul {
-					> li {
-						margin-left: 1.5em;
-
-						a {
-							height: 6em;
-							line-height: 6em;
-						}
-					}
-				}
-			}
+			display: none;
 		}
 	}
