@@ -1,0 +1,40 @@
+---
+layout: topbar-base
+---
+{{content}}
+<h2>A Direção</h2>
+<section id="management">
+    {% capture default_picture%}{{ "/assets/images/members/default.svg" | relative_url }}{% endcapture %}
+    <div>
+    {% for member in site.members %}
+        {% if member.management_role %}
+        <div>
+            <a href="{{member.url}}">
+                <img src="{{ member.picture | default: default_picture }}">
+                </br>
+                <span>{{member.name}}</span>
+                </br>
+                <span class="role">{{member.management_role}}</span>
+            </a>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</section>
+<h2>Os nossos membros</h2>
+<section id="members">
+    {% capture default_picture%}{{ "/assets/images/members/default.svg" | relative_url }}{% endcapture %}
+    <div>
+    {% for member in site.members %}
+        {% unless member.management_role %}
+        <div>
+            <a href="{{member.url}}">
+                <img src="{{ member.picture | default: default_picture }}">
+                </br>
+                <span class="name">{{member.name}}</span>
+            </a>
+        </div>
+        {% endunless %}
+    {% endfor %}
+    </div>
+</section>

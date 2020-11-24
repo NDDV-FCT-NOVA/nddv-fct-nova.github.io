@@ -11,6 +11,10 @@ includes_dir        : _includes
 sass:
   sass_dir: _sass
 collections:
+  members:
+    output: true
+    layout: member.html
+    sort_by: name
 #  posts:
 #    output          : true
 
