@@ -29,6 +29,7 @@ layout: topbar-base
         {% unless member.management_role %}
         <div>
             <a href="{{member.url}}">
+
                 <img src="{{ member.picture | default: default_picture }}">
                 </br>
                 <span class="name">{{member.name}}</span>
