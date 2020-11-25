@@ -12,10 +12,11 @@
 
 name: Rafael # Your name here
 course: Engenharia Informática # Your course here
+since: 2019 # year you joined
 # picture: (optional but recommended)
 
-# 
-# All fields are optional. Uncomment only the ones
+# Bellow you can leave contact info
+# All the fields bellow are optional. Uncomment only the ones
 #you want to share
 contacts:
 
