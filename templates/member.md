@@ -12,7 +12,7 @@
 
 name: Rafael # Your name here
 course: Engenharia Informática # Your course here
-picture: 
+# picture: (optional but recommended)
 
 # 
 # All fields are optional. Uncomment only the ones
