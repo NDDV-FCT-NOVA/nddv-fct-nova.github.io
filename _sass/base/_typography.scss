@@ -68,24 +68,29 @@
 
 	h1 {
 		font-size: 2.75em;
+	}
 
-		&.major {
-			margin: 0 0 (_size(element-margin) * 0.65) 0;
-			position: relative;
-			padding-bottom: 0.35em;
-
-			&:after {
-				@include vendor('background-image', 'linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)})');
-				@include vendor('transition', 'max-width #{_duration(transition)} ease');
-				border-radius: 0.2em;
-				bottom: 0;
-				content: '';
-				height: 0.05em;
-				position: absolute;
-				right: 0;
-				width: 100%;
-			}
+	.major{
+		h1{
+			line-height:0;
 		}
+		p{
+			color: _palette(fg-light);
+		}
+		&:after {
+			@include vendor('background-image', 'linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)})');
+			@include vendor('transition', 'max-width #{_duration(transition)} ease');
+			border-radius: 0.2em;
+			bottom: 0;
+			content: '';
+			height: 0.05em;
+			position: absolute;
+			right: 0;
+			width: 100%;
+		}
+		margin: 0 0 (_size(element-margin) * 0.65) 0;
+		position: relative;
+		padding-bottom: 0.35em;
 	}
 
 	h2 {

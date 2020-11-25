@@ -1,14 +1,15 @@
 ---
-layout: topbar-base
+layout: generic
 ---
-
-<section id="member_frame">
+<section class="major">
+    <h1>{{ page.name }}</h1>
+    <p>{{page.course}} - Membro desde {{ page.since }}</p>
+</section>
+<section>
     <div>
         {% if page.picture %}
-        <img src="{{page.picture}}">
+        <span class="image left"><img src="{{page.picture}}"></span>
         {% endif %}
-        <h1 class="name">{{ page.name }}</h1>
-        <span class="course">{{page.course}}<br/></span>
         {{content}}
     </div>
 </section>

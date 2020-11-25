@@ -8,7 +8,7 @@
 
 	.wrapper {
 		position: relative;
-
+		overflow: auto;
 		> .inner {
 			@include padding(5em, 5em);
 			max-width: 100%;
