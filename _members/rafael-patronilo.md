@@ -2,6 +2,7 @@
 layout: member
 name: Rafael Patronilo
 course: Engenharia Informática
+since: 2019
 
 contacts:
   social:
