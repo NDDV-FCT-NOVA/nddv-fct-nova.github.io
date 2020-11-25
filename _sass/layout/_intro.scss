@@ -27,7 +27,7 @@
 			}
 		}
 
-		@include breakpoint('<=large') {
-			background-attachment: scroll;
-		}
+		//@include breakpoint('<=large') {
+		//	background-attachment: scroll;
+		//}
 	}

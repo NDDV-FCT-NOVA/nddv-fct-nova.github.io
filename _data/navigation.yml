@@ -1,6 +1,6 @@
-- name: Home
-  link: /index.html#intro
 - name: Sobre nós
-  link: /index.html#about
+  home_relative: '#about'
+  link: index.html#about
 - name: Contactos
-  link: /index.html#contacts
+  home_relative: '#contacts'
+  link: index.html#contacts

@@ -1,0 +1,20 @@
+---
+layout: topbar-base
+---
+
+<section id="member_frame">
+    <div>
+        {% if page.picture %}
+        <img src="{{page.picture}}">
+        {% endif %}
+        <h1 class="name">{{ page.name }}</h1>
+        <span class="course">{{page.course}}<br/></span>
+        {{content}}
+    </div>
+</section>
+<section id="contacts" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Contactos</h2>
+        {%include contacts.html contacts = page.contacts %}
+    </div>
+</section>

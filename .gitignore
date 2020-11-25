@@ -1,4 +1,7 @@
-/assets/css/main.css.map
+# editors
+## vscode
+.vscode/
+*.code-workspace
 
 # Jekyll
 _site/

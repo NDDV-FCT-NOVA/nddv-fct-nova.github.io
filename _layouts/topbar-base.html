@@ -1,0 +1,14 @@
+---
+layout: base
+---
+<header id="header">
+    <a href="/index.html" class="title"><img src="/assets/images/logo-no-frame.png"></a>
+    <nav>
+        <ul>
+            {% for nav_element in site.data.navigation %}
+            <li><a href="{{ nav_element.link }}">{{ nav_element.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
+{{content}}

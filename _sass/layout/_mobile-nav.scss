@@ -1,0 +1,77 @@
+#mobile-nav{
+    position: relative;
+    display: none;
+    background: _palette(bg-nav);
+    align-items: center;
+    z-index: 1;
+
+    @include breakpoint("<=small"){
+        display: block;
+    }
+    
+    .inner {
+        height: 0;
+        @include vendor('transition', 'height #{_duration(transition) * 2} ease');
+        overflow: hidden;
+        nav {
+			> ul {
+				list-style: none;
+				padding: 0;
+
+				> li {
+					margin: 0;
+					opacity: 1;
+					padding: 0;
+					position: relative;
+				}
+			}
+
+			a {
+				border: 0;
+				color: _palette(fg-bold);
+				display: block;
+				font-size: 1em;
+				font-weight: _font(weight-bold);
+				letter-spacing: _font(kerning-alt);
+				line-height: 1.75;
+				outline: 0;
+				padding: 1.35em 0;
+				position: relative;
+				text-decoration: none;
+                text-align: center;
+			}
+		}
+    }
+    label::before{
+        display: none;
+    }
+
+    label{
+        min-height: _size(mobile-nav-height);
+        max-height: _size(mobile-nav-height);
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        img{
+            margin:auto;
+            display:block;
+        }
+    }
+
+    input#nav-toggle{
+        display: none
+    }
+
+    input:checked ~ .inner{
+        height: 400px;
+    }
+}
+
+// #mobile-nav > input:checked{
+//     position: fixed;
+//     top:0;
+//     right:0;
+//     left: 0;
+// }
