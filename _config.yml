@@ -13,9 +13,9 @@ collections:
   members:
     output: true
     permalink: /:collection/:path
-
-#  posts:
-#    output          : true
+  posts:
+    output          : true
+    permalink: /:collection/:path
   
 
 # Handling Reading
@@ -74,6 +74,11 @@ defaults            :
       type: "members"
     values:
       layout: "member"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 liquid:
   error_mode        : warn

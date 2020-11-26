@@ -1,4 +1,5 @@
 ---
+title: Sobre nós
 layout: about
 # <!--excerpt--> tell where to break the content when showing on index.html
 ---

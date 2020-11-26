@@ -1,0 +1,21 @@
+---
+layout: generic
+---
+<section class="major">
+    <h1>{{ page.title }}</h1>
+    <p><span class="icon fa-calendar"></span> Publicado a {{page.date | date: "%e-%m-%Y"}}</p>
+</section>
+{% if page.cover %}
+<section>
+    <div class="box alt">
+        <div class="row gtr-uniform">
+            <div class="col-12"><span class="image fit"><img src="{{page.cover}}" alt="" /></span></div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<section>
+    <div>
+        {{content}}
+    </div>
+</section>
