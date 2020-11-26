@@ -13,15 +13,25 @@ collections:
   members:
     output: true
     permalink: /:collection/:path
-
-#  posts:
-#    output          : true
+  posts:
+    output          : true
+    permalink: /:collection/:path
   
 
 # Handling Reading
 safe                : false
 include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "templates/"]
+exclude             : 
+  - "Gemfile" 
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+  - "templates/"
+  - "README.md"
+  - "LICENSE.txt"
 keep_files          : [".git", ".svn"]
 encoding            : "utf-8"
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
@@ -64,6 +74,11 @@ defaults            :
       type: "members"
     values:
       layout: "member"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 liquid:
   error_mode        : warn

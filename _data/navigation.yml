@@ -3,4 +3,4 @@
   link: /about
 - name: Contactos
   home_relative: '#contacts'
-  link: /index.html#contacts
+  link: /about#contacts

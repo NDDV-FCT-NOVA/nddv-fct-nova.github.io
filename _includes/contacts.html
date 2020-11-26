@@ -23,40 +23,40 @@
         <h3>Social</h3>
         <ul class="icons">
             {% if contacts.social.twitter %}
-            <li><a href="{{ contacts.social.twitter }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a target="_blank" href="https://twitter.com/{{ contacts.social.twitter }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
             {% endif %}
             {% if contacts.social.facebook %}
-            <li><a href="{{ contacts.social.facebook }}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/{{ contacts.social.facebook }}/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
             {% endif %}
             {% if contacts.social.github %}
-            <li><a href="https://github.com/{{ contacts.social.github }}" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a target="_blank" href="https://github.com/{{ contacts.social.github }}" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
             {% endif %}
             {% if contacts.social.gitlab %}
-            <li><a href="https://gitlab.com/{{ contacts.social.gitlab }}" class="icon brands fa-gitlab"><span class="label">GitLab</span></a></li>
+            <li><a target="_blank" href="https://gitlab.com/{{ contacts.social.gitlab }}" class="icon brands fa-gitlab"><span class="label">GitLab</span></a></li>
             {% endif %}
             {% if contacts.social.instagram %}
-            <li><a href="https://www.instagram.com/{{ contacts.social.instagram }}/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/{{ contacts.social.instagram }}/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
             {% endif %}
             {% if contacts.social.youtube %}
-            <li><a href="https://www.youtube.com/channel/{{ contacts.social.youtube }}" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/{{ contacts.social.youtube }}" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
             {% endif %}
             {% if contacts.social.linkedin %}
-            <li><a href="https://www.linkedin.com/in/{{ contacts.social.linkedin }}/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/{{ contacts.social.linkedin }}/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
             {% endif %}
             {% if contacts.social.discord_server %}
-            <li><a href="https://discord.gg/{{ contacts.social.discord_server }}" class="icon brands fa-discord"><span class="label">Discord Server</span></a></li>
+            <li><a target="_blank" href="https://discord.gg/{{ contacts.social.discord_server }}" class="icon brands fa-discord"><span class="label">Discord Server</span></a></li>
             {% endif %}
             {% if contacts.social.steam_personal %}
-            <li><a href="https://steamcommunity.com/profiles/{{ contacts.social.steam_personal }}/" class="icon brands fa-steam"><span class="label">Steam Community Profile</span></a></li>
+            <li><a target="_blank" href="https://steamcommunity.com/profiles/{{ contacts.social.steam_personal }}/" class="icon brands fa-steam"><span class="label">Steam Community Profile</span></a></li>
             {% endif %}
             {% if contacts.social.steam_developer %}
-            <li><a href="https://store.steampowered.com/developer/{{ contacts.social.steam_developer }}/" class="icon brands fa-steam"><span class="label">Steam Developer</span></a></li>
+            <li><a target="_blank" href="https://store.steampowered.com/developer/{{ contacts.social.steam_developer }}/" class="icon brands fa-steam"><span class="label">Steam Developer</span></a></li>
             {% endif %}
             {% if contacts.social.twitch %}
-            <li><a href="https://www.twitch.tv/{{ contacts.social.twitch }}" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
+            <li><a target="_blank" href="https://www.twitch.tv/{{ contacts.social.twitch }}" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
             {% endif %}
             {% if contacts.social.itch %}
-            <li><a href="https://{{ contacts.social.itch }}.itch.io" class="icon brands fa-itch-io"><span class="label">Itch</span></a></li>
+            <li><a target="_blank" href="https://{{ contacts.social.itch }}.itch.io" class="icon brands fa-itch-io"><span class="label">Itch</span></a></li>
             {% endif %}
         </ul>
     </li>
@@ -68,7 +68,7 @@
             {% for contact in contacts.other %}
             <p>
                 {% if contact.link %}
-                <a href="{{ contact.link }}">{{ contact.platform }}</a>
+                <a target="_blank" href="{{ contact.link }}">{{ contact.platform }}</a>
                 {% else %}
                 <b>{{ contact.platform }}:</b> {{ contact.id }}
                 {% endif %}

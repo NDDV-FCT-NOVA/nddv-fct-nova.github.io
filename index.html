@@ -12,9 +12,7 @@ about: |
  - Criar interesse e auxiliar alunos da FCT em áreas relacionadas com game dev
  - Servir como ponto de ligação entre alunos e a comunidade portuguesa de game dev
  - Tornar a FCT uma referência nacional para game dev
-contacts:
- title: Contactos
- paragraph: Segues-nos para estares sempre a par de novidades!!!
+contacts-paragraph: Segues-nos para estares sempre a par de novidades!!!
 ---
 <!-- Sidebar -->
 <section id="sidebar">
@@ -56,9 +54,10 @@ contacts:
 			{% endif %}
 				<div class="content">
 					<div class="inner">
-						{{ page.about | markdownify }}
-						<br/><br />
-						<a href="{{'/about.html' | relative_url }}" class="button">Ler mais</a>
+						<!--Get the first header and paragraph from about-->
+						{%- assign about= site.pages | where: "name", "about.md" | first -%}
+						{{ about.content | split: "<!--excerpt-->" | first | markdownify }}
+						<a href="{{'/about' | relative_url }}" class="button">Ler mais</a>
 					</div>
 				</div>
 			</section>
@@ -66,8 +65,8 @@ contacts:
 	<!-- Contacts -->
 		<section id="contacts" class="wrapper style1 fade-up">
 			<div class="inner">
-				<h2>{{page.contacts.title}}</h2>
-				<p>{{page.contacts.paragraph}}</p>
+				<h2>Contactos</h2>
+				<p>{{page.contacts-paragraph}}</p>
 				{% include contacts.html contacts=site.data.contacts %}
 			</div>
 		</section>

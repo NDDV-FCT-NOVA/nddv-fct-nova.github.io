@@ -1,5 +1,5 @@
 ---
-layout: topbar-base
+layout: generic
 ---
 {{content}}
 <h2>A Direção</h2>
@@ -37,5 +37,11 @@ layout: topbar-base
         </div>
         {% endunless %}
     {% endfor %}
+    </div>
+</section>
+<section id="contacts" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Contactos</h2>
+        {%include contacts.html contacts = site.data.contacts %}
     </div>
 </section>
