@@ -4,7 +4,7 @@ layout: about
 # <!--excerpt--> tell where to break the content when showing on index.html
 ---
 # Quem somos
-Nós somos um grupo de estudantes da [FCT NOVA](https://fct.unl.pt) 
+Nós somos um grupo de estudantes da [NOVA SSH](https://fct.unl.pt) 
 com interesse em design e desenvolvimento de videojogos.
 <!--excerpt-->
 # As nossas metas
