@@ -1,5 +1,6 @@
 # NDDV Github Website
 Github pages + jekyll based website for NDDV
+Styles are written in sass and can be found at `_sass`
 
 ## Running locally
 This project uses [bundler](https://bundler.io/) to allow for easier dependency installation
