@@ -14,6 +14,7 @@ about: |
  - Tornar a FCT uma referência nacional para game dev
 contacts-paragraph: Segue-nos para estares sempre a par de novidades!!!
 ---
+
 <!-- Sidebar -->
 <section id="sidebar">
 	<a href="#intro"><img src="assets/images/logo-no-frame.png"></a>
@@ -27,6 +28,8 @@ contacts-paragraph: Segue-nos para estares sempre a par de novidades!!!
 		</nav>
 	</div>
 </section>
+
+
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -37,14 +40,6 @@ contacts-paragraph: Segue-nos para estares sempre a par de novidades!!!
 				</ul>
 			</div>
 		</section>
-	<!-- News -->
-	<section id="about" class="wrapper style3 spotlights">
-		<div class="content">
-			<div class="inner">
-				
-			</div>
-		</div>
-	</section>
 
 	<!-- About -->
 		<section id="about" class="wrapper style3 spotlights">
@@ -62,6 +57,17 @@ contacts-paragraph: Segue-nos para estares sempre a par de novidades!!!
 				</div>
 			</section>
 			
+	<!-- Events -->
+	<section id="events" class="wrapper style3 spotlights">
+		<div class="content">
+			<div class="inner">
+				{% for event in site.events %}
+					<a href="{{event.url}}">clica aqui</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
 	<!-- Contacts -->
 		<section id="contacts" class="wrapper style1 fade-up">
 			<div class="inner">

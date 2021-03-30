@@ -1,6 +1,9 @@
 - name: Sobre nós
-  home_relative: '#about'
+  home_relative: "#about"
   link: /about
+- name: Eventos Próximos
+  home_relative: "#events"
+  link: /events
 - name: Contactos
-  home_relative: '#contacts'
+  home_relative: "#contacts"
   link: /about#contacts
