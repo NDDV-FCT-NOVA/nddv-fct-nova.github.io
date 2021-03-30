@@ -3,10 +3,10 @@ Github pages + jekyll based website for NDDV
 Styles are written in sass and can be found at `_sass`
 
 ## Running locally
-This project uses [bundler](https://bundler.io/) to allow for easier dependency installation
+The project requires ruby. The project uses [bundler](https://bundler.io/) to allow for easier dependency installation
 The following command is used to install development dependencies:
 ```
-bundle install --path vendor/bundle
+bundle config set --local path 'vendor/bundle'
 ```
 The following command updates dependencies:
 ```
