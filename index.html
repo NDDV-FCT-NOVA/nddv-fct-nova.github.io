@@ -34,28 +34,28 @@ contacts-paragraph: Segue-nos para estares sempre a par de novidades!!!
 <div id="wrapper">
 
 	<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				{{ page.welcome | markdownify }}
-				</ul>
-			</div>
-		</section>
+	<section id="intro" class="wrapper style1 fullscreen fade-up">
+		<div class="inner">
+			{{ page.welcome | markdownify }}
+			</ul>
+		</div>
+	</section>
 
-	<!-- About -->
-		<section id="about" class="wrapper style3 spotlights">
-			<section>
-			{% if page.about.cover %}
-				<a href="#" class="image"><img src="{{ about.cover | relative_url }}" alt="" data-position="center center" /></a>
-			{% endif %}
-				<div class="content">
-					<div class="inner">
-						<!--Get the first header and paragraph from about-->
-						{%- assign about= site.pages | where: "name", "about.md" | first -%}
-						{{ about.content | split: "<!--excerpt-->" | first | markdownify }}
-						<a href="{{'/about' | relative_url }}" class="button">Ler mais</a>
-					</div>
+<!-- About -->
+	<section id="about" class="wrapper style3 spotlights">
+		<section>
+		{% if page.about.cover %}
+			<a href="#" class="image"><img src="{{ about.cover | relative_url }}" alt="" data-position="center center" /></a>
+		{% endif %}
+			<div class="content">
+				<div class="inner">
+					<!--Get the first header and paragraph from about-->
+					{%- assign about= site.pages | where: "name", "about.md" | first -%}
+					{{ about.content | split: "<!--excerpt-->" | first | markdownify }}
+					<a href="{{'/about' | relative_url }}" class="button">Ler mais</a>
 				</div>
-			</section>
+			</div>
+	</section>
 			
 	<!-- Events -->
 	<section id="events" class="wrapper style3 spotlights">
@@ -68,13 +68,31 @@ contacts-paragraph: Segue-nos para estares sempre a par de novidades!!!
 		</div>
 	</section>
 
-	<!-- Contacts -->
-		<section id="contacts" class="wrapper style1 fade-up">
+
+	<!-- Posts -->
+	<section id="posts" class="wrapper style3 spotlights">
+		<div class="content">
 			<div class="inner">
-				<h2>Contactos</h2>
-				<p>{{page.contacts-paragraph}}</p>
-				{% include contacts.html contacts=site.data.contacts %}
+				{% for post in site.posts %}
+					<div>	
+						<a href="{{post.url}}">{{ post.title }}</a><br>
+						{% if post.cover %}
+							<img src="{{post.cover}}" alt="" />
+						{% endif %}
+						{{ post.excerpt }}
+					</div>
+				{% endfor %}
 			</div>
-		</section>
+		</div>
+	</section>
+
+	<!-- Contacts -->
+	<section id="contacts" class="wrapper style1 fade-up">
+		<div class="inner">
+			<h2>Contactos</h2>
+			<p>{{page.contacts-paragraph}}</p>
+			{% include contacts.html contacts=site.data.contacts %}
+		</div>
+	</section>
 
 </div>

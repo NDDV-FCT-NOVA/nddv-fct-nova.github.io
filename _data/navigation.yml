@@ -4,6 +4,9 @@
 - name: Eventos Próximos
   home_relative: "#events"
   link: /events
+- name: Posts
+  home_relative: "#posts"
+  link: /posts
 - name: Contactos
   home_relative: "#contacts"
   link: /about#contacts
